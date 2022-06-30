@@ -28,7 +28,7 @@ th, td {
    </style>
     <link rel="stylesheet" href="style.css" />
  </head>
-    <?php include 'header2.php';?>
+    <?php include 'student_header.php';?>
     <body> 
 
     <?php include 'connection.php';

@@ -3,8 +3,8 @@
   
   <div class="header-right">
   <a>Student </a>
-    <a href="student1.php">Home</a>
-    <a href="show1.php" >Issued_books</a>
+    <a href="student_dashboard.php">Home</a>
+    <a href="student_issued_books.php">Issued_books</a>
   </div>
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

@@ -80,7 +80,7 @@
     </script>
 </head>
 
-<?php include 'header.php';?>
+<?php include 'registration_header.php';?>
 
 
 <div class="form-1">
@@ -111,51 +111,47 @@
 
 
 
-            <fieldset style="width:400px;padding:30px; text-align:center">
+            <fieldset style="width:300px;padding:30px; text-align:center">
 
 
 
 
-                <p>
-                    <div class="my-label required"><i class="fa fa-user" style="font-size:22px;padding-left:2%;padding-top:3%;"></i>
-                        <input id="username" name="username" type="text" placeholder="Username" oninput="myfunction3(this.value)"></input>
-                    </div>
+                <div>
+                    <i class="fa fa-user" style="font-size:22px;padding-left:2%;padding-top:3%;"></i>
+                        <input id="username" name="username" type="text" placeholder="Username" oninput="usernameValidation(this.value)"></input>
+                    
                     <div id="demo3">hello</div>
-    </p>
+    </div>
                 <script>
-                    function myfunction3(val) {
+                    function usernameValidation(val) {
                         if (val.length > 20) {
 
 
                             document.getElementById("demo3").style.visibility = "visible"
-                            document.getElementById("demo3").innerHTML = "<span style=color:red;font-size:14px; margin-top:2px;>please enter characters only upto 20</span>";
+                            document.getElementById("demo3").innerHTML = "<span style=color:red;font-size:12px; margin-top:2px;>please enter characters only upto 20</span>";
 
                             //else{
                             //document.getElementById("demo").innerHTML="";
                             // }
                         } else {
-                            var regex= /^[a-z0-9_\-]+$|^\s*$/
-                            if(val.match(regex)){
-                                document.getElementById("demo3").style.visibility = "hidden"
-                            document.getElementById("demo3").innerHTML = "<span style=color:red;margin-top:2px;font-size:14px>please enter characters only lowercase letters</span>"
-                            }
-                            else{document.getElementById("demo3").style.visibility = "visible"
-                            document.getElementById("demo3").innerHTML = "<span style=color:red;margin-top:2px;font-size:14px>please enter characters only lowercase letters</span>";
+                            
+                            document.getElementById("demo3").style.visibility = "hidden"
+                            document.getElementById("demo3").innerHTML = "<span style=color:red;margin-top:2px;font-size:12px>HII</span>";
 
-                            }
+                            
 
                         }
                     }
                 </script>
-                <p>
+               <div>
 
-                    <div class="my-label required"> <i class="fa fa-envelope"  style="font-size:20px;margin-top:2px;padding-left:1%;padding-top:3%"></i>
-                        <input id="email" name="email" placeholder="Email" type="text" oninput="myfun8(this.value)"></input>
-                    </div>
+                <i class="fa fa-envelope"  style="font-size:20px;margin-top:2px;padding-left:1%;padding-top:3%"></i>
+                        <input id="email" name="email" placeholder="Email" type="text" oninput="emailValidation(this.value)"></input>
+                  
                     <div id="demo10">hello</div>
-                </p>
+                </div>
                 <script>
-                    function myfun8(val) {
+                    function emailValidation(val) {
                         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/; {
                             if (!emailReg.test(val)) {
                                 document.getElementById("demo10").style.visibility = "visible"
@@ -171,15 +167,15 @@
                 </script>
 
 
-                <span>
-                    <div class="my-label required"> <i class="fa fa-lock" style="font-size:22px;margin-top:2px;padding-left:2%;padding-top:3%"></i>
-                        <input type="password" id="password" placeholder="Password" name="password" oninput="myfun82(this.value)"> <i class="bi bi-eye-slash" 
+                <div>
+                   <i class="fa fa-lock" style="font-size:22px;margin-top:2px;padding-left:2%;padding-top:3%"></i>
+                        <input type="password" id="password" placeholder="Password" name="password" oninput="paaswordValidation(this.value)"> <i class="bi bi-eye-slash" 
                     id="togglePassword"style=" margin-top:3%;margin-left: -30px; cursor: pointer;"></i>
-                    </div>
+                    
                     <div id="demo2">Hello</div>
-                </span>
+                </div>
                 <script> 
-               function myfun82(val){
+               function paaswordValidation(val){
                   var regex=  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/
                   var regex2 = /^\s*$/;
                   if (regex2.test(val)) {
@@ -188,7 +184,7 @@
                         } 
              else  {  if (!regex.test(val)) {
                                 document.getElementById("demo2").style.visibility = "visible"
-                                document.getElementById("demo2").innerHTML = "<span style=color:red;margin-top:2px;font-size:16px>please enter valid password consisting of uppercase letters, lowercase letters and number and upto 8 characters</span>";
+                                document.getElementById("demo2").innerHTML = "<span style=color:red;margin-top:2px;font-size:12px>please enter valid password consisting of uppercase letters, lowercase letters and number and upto 8 characters</span>";
                             } else {
                                 document.getElementById("demo2").style.visibility = "hidden"
                                 document.getElementById("demo2").innerHTML = "hello "
@@ -213,13 +209,13 @@
 
 
 
-                <span>
-                <div class="my-label required"> <i class="fa fa-lock" style="font-size:22px;padding-left:2%;padding-top:2%"></i>
-                        <input  type="password" id="confirm_password" placeholder=" Confirm_Password" name="confirm_password" oninput="myFunction5(this.value)" >   <i class="bi bi-eye-slash" 
+                <div>
+                 <i class="fa fa-lock" style="font-size:22px;padding-left:2%;padding-top:2%"></i>
+                        <input  type="password" id="confirm_password" placeholder=" Confirm_Password" name="confirm_password" oninput="confirm_PasswordValidation(this.value)" >   <i class="bi bi-eye-slash" 
                     id="password2" style=" margin-top:3%;margin-left:-30px; cursor: pointer;" onclick=myFun()></i>
-                    </div>
+              
                     <div id="demo6">hello</div>
-                </span>
+    </div>
                 <script>
                     function myFun()
 
@@ -248,7 +244,7 @@
      
 
 
-                    function myFunction5(val) {
+                    function confirm_PasswordValidation(val) {
                         var regex = /^\s*$/;
                         if (regex.test(val)) {
                             document.getElementById("demo6").style.visibility = "hidden";
@@ -257,7 +253,7 @@
                             if (val != myInput.value) {
                                 <?php $count = 1 ?>
                                 document.getElementById("demo6").style.visibility = "visible";
-                                document.getElementById("demo6").innerHTML = "<span style=color:red;margin-top:2px;font-size:14px>Please enter same password</span>";
+                                document.getElementById("demo6").innerHTML = "<span style=color:red;margin-top:2px;font-size:12px>Please enter same password</span>";
 
                             } else {
 
@@ -269,26 +265,12 @@
                     // When the user clicks on the password field, show the message box
                 </script>
 
-
-                <script>
-                    function myFun35(val) {
-                        var regex = /^\s*$/;
-                        if (regex.test(val)) {
-                            document.getElementById("demo14").style.visibility = "visible";
-                            document.getElementById("demo14").innerHTML = "<span style=color:red;margin-top:2px;font-size:12px>please agree to our policy</span>";
-                            event.preventDefault();
-                        } else {
-                            document.getElementById("demo14").style.visibility = "hidden";
-                            document.getElementById("demo14").innerHTML = " hello";
-                        }
-                    }
-                </script>
-                <span> <div id="tr"><small> <input type="checkbox" style="padding-right:5%"name="submit" value=" " class="ujk" id="suc2" onclick="myFunw(this)"></input><a href='policies.html'style='padding-right:5%'>
+                <div> <div id="tr"><small> <input type="checkbox" style="padding-right:5%"name="submit" value=" " class="ujk" id="suc2" onclick="policyValidation(this)"></input><a href='policies.html'style='padding-right:5%'>
  'Terms and Conditions</a></small>
                 </div>    <div id="suc">hello</div>
-                </span>
+                </div>
                 <script>
-                    function myFunw(suc2) {
+                    function policyValidation(suc2) {
                         check = document.getElementById("suc2");
                         if (check.checked) {
                             document.getElementById("suc").style.visibility = "hidden"
@@ -308,12 +290,12 @@
                 </span>
 
 
-                <p>
+                
                 <div class="sub">
-                    <input class="submit" id="myBtn"type="submit" value="Submit" style="margin-right:50px;height:30px; width:80px">
+                    <input class="submit" id="myBtn"type="submit" value="Submit" style="margin-right:20px;height:40px; font-weight:bold;width:150px">
                 </div>
 
-                </p>
+                
 
             </fieldset>
         </form>
@@ -333,14 +315,13 @@ window.onload = function(){
         })})}</script>
 <?php $selected = $_POST['role'];
 
- echo "hello";
     include "connection.php";
     // username and password sent from form 
 
     $myusername = $_POST['username'];
    $mypassword = $_POST['password'];
     $email = $_POST['email'];
- echo "hii";
+
     $sql4 = "SELECT *FROM users WHERE email = '$email' ";
 
     $result = mysqli_query($conn, $sql4);
@@ -349,7 +330,6 @@ window.onload = function(){
     //$active = $row['active'];
 
     $count = mysqli_num_rows($result);
-echo $count;
 
    if ($count == 1 ) {
       echo $email;?>
@@ -444,6 +424,7 @@ var span = document.getElementsByClassName("close")[0];
 
   modal.style.display = "block";
 document.getElementById("email3").innerHTML="Registration successful"
+window.location.href='login.php';
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {

@@ -64,7 +64,7 @@ while($row=mysqli_fetch_assoc($queryRun)){
 </head>
 
 <body>
-<?php include 'header.php';?>
+<?php include 'admin_header.php';?>
     <div class="form-2">
     
 
@@ -74,11 +74,11 @@ while($row=mysqli_fetch_assoc($queryRun)){
 
 <div class="user_books">
 <div class="first-class"><h3> number of users :<?php echo getUserCount() ; ?></h3>
-<div class="design-1">  <a href="registered.php" >"registered user" </a></div>
+<div class="design-1">  <a href="users.php" >"registered user" </a></div>
 </div> <div class="design-4">
- <div class="second-class"><h3>number of books available :<?php echo getUserBook();?></h3><div class="show"> <a href="show_book.php"> show books </a></div></div>
+ <div class="second-class"><h3>number of books available :<?php echo getUserBook();?></h3><div class="show"> <a href="books_show.php"> show books </a></div></div>
  <div class="frth-class"><h3>number of issues book: <?php echo getUserIssue();?></h3>
-<div class="third-class"><a href="show.php">"show issued book" </a></div></div>
+<div class="third-class"><a href="issued_book_show.php">"show issued book" </a></div></div>
 <div class="fourth-class"><h3> number of deposited books:<?php echo getUserDeposited();?> </h3><div class="book">book to submit <button id="myBtn">click</button></div></div></div>
 <div id="myModal" class="modal">
 
@@ -122,6 +122,6 @@ window.onclick = function(event) {
 
     </div>
     
-<div class="sixth-class"><a href="newestissue.php"><h3>"To fill issue books detail click here"</h3></a></div>
+<div class="sixth-class"><a href="admin_issuedbook.php"><h3>"To fill issue books detail click here"</h3></a></div>
 </body>
 </html>

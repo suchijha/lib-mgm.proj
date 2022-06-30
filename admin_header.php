@@ -4,10 +4,10 @@
   <div class="header-right">
 
     <a class="dbs" href="login.php">Login</a>
-    <a class="dbs" href="newadd.php">Add Book </a>
-    <a  class="dbs" href="dbs.php" >Home</a>
-    <a class="dbs"href="new.php">Registration</a>
-    <a class="dbs" href="registered.php">Users</a>
+    <a class="dbs" href="add_book.php">Add Book </a>
+    <a  class="dbs" href="dashboard.php" >Home</a>
+    <a class="dbs"href="registration.php">Registration</a>
+    <a class="dbs" href="users.php">Users</a>
   </div>
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

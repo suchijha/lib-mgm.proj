@@ -47,16 +47,16 @@ include 'connection.php';?>
     echo "Error: " . $sql . "<br>" . $conn->error;
   }
 }
-  }
+  ?>
+
+
+  <script>window.location.href='student_issued_books.php';</script>
+
+<?php }?>
 
 
 
 
-
-
-
-
-?>
 
 
 
@@ -65,7 +65,7 @@ include 'connection.php';?>
   <head>
   <link rel="stylesheet" href="style.css" />
  
-<?php include 'header2.php';?>
+<?php include 'student_header.php';?>
 
 
 
@@ -90,16 +90,17 @@ include 'connection.php';?>
         
 
 
-        <fieldset style="width:300px;height:400px;border:1px solid black ;background-color:#e6edeb;text-align:left;">
+        <fieldset style="width:300px;height:350px;border:1px solid black ;background-color:#e6edeb;text-align:center;">
         
           <span>
            
-              <input id="bookid" name="bookId" type="number" placeholder="book_id" oninput="myfunction3(this.value) "></input>
+              <input id="bookid" name="bookId" type="number" placeholder="book_id" oninput="myfunction3(this.value)" value="<?php echo $selected_category = $_GET['bookId'];?>" ></input>
         
           </span>
           <span>
            
-              <input id="userid" name="userId" placeholder="user_id" type="number" oninput="myfun8(this.value)"></input>
+              <input id="userid" name="userId" placeholder="user_id" type="number" value="<?php echo $_SESSION['userid'];?>"
+      oninput="myfun8(this.value)"></input>
             
             <span>
               
@@ -114,7 +115,7 @@ include 'connection.php';?>
                 </span>
                 <span>
               
-                    <input class="submit2" type="submit" value="Submit"name="submit" style="margin-left:95px;height:30px; width:80px">
+                    <input class="submit2" type="submit" value="Submit"name="submit" style="margin-left:5px;height:30px; width:150px">
               
                 </span>
         </fieldset>

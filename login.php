@@ -59,11 +59,11 @@ include 'connection.php';
         if($id=='admin')
          {$_SESSION['login_user'] = $myUsername;
          echo "hi";
-         echo "<script>window.location.href='dbs.php';</script>";}
+         echo "<script>window.location.href='dashboard.php';</script>";}
         else{
            
             
-            echo "<script>window.location.href='student1.php';</script>"; 
+            echo "<script>window.location.href='student_dashboard.php';</script>"; 
      
         }
         
@@ -155,7 +155,7 @@ include 'connection.php';
         });
     </script>
 </head>
-<?php include 'header.php'?>
+<?php include 'registration_header.php'?>
 
 
 <div class="form-3">
@@ -171,24 +171,24 @@ include 'connection.php';
 
 
 
-            <fieldset style="width:400px;padding:20px">
+            <fieldset style="width:300px;padding:20px">
 
 
-                <span>
+                <div>
 
-                    <div class="my-label required"> <i class="fa fa-envelope" style="font-size:18px;padding-top:3%"></i>
-                        <input id="email" name="email" placeholder="Email" value="<?php echo $_POST['email']; ?>" oninput="myFun8(this.value)"
+                     <i class="fa fa-envelope" style="font-size:18px;padding-top:3%"></i>
+                        <input id="email" name="email" placeholder="Email" value="<?php echo $_POST['email']; ?>" oninput="emailValidation(this.value)"
                       ></input>
-                    </div>
+                    
                   
                     <div id="demo20"><div id="demo75"><?php echo $error;echo "<span style=font-size:14px;margin-top:5px;visibility:hidden;>hii</span>"?></div></div>
                
               
 
-                </span>
+    </div>
                 <script>
       
-                    function myFun8(val) {
+                    function emailValidation(val) {
                         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/; {
                             if (!emailReg.test(val)) {
                                 document.getElementById("demo20").style.visibility = "visible"
@@ -206,13 +206,13 @@ include 'connection.php';
                 </script>
 
 
-                <span>
-                    <div class="my-label required"> <i class="fa fa-lock" style="font-size:22px;padding-top:2%"></i>
-                        <input  type="password" id="password1" placeholder="Password" name="password" oninput="myFun82(this.value)" value="<?php echo $_POST['password']?>">   <i class="bi bi-eye-slash" 
+                <div>
+                   <i class="fa fa-lock" style="font-size:22px;padding-top:2%"></i>
+                        <input  type="password" id="password1" placeholder="Password" name="password" oninput="passwordValidation(this.value)" value="<?php echo $_POST['password']?>">   <i class="bi bi-eye-slash" 
                     id="togglePassword"style=" margin-top:3%;margin-left: -30px; cursor: pointer;"></i>
                   
                     
-                    </div>
+                  
 
                     <div id="demo15"><div id="demo25"><?php echo $error1;echo "<span style= font-size:14px;visibility:hidden;margin-top:5px>hii</span>";?></div></div>
                     <script>
@@ -233,9 +233,9 @@ include 'connection.php';
                     
                
                
-                </span>
+    </div>
                 <script> 
-               function myFun82(val){
+               function passwordValidation(val){
                   var regex=  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/
                   var regex2 = /^\s*$/;
                   if (regex2.test(val)) {
@@ -266,7 +266,7 @@ include 'connection.php';
 
 
                 <div class="sub">
-                    <input class="submit1" type="submit" value="Submit" style="margin-right:20px;height:30px; width:80px">
+                    <input class="submit1" type="submit" value="Submit" style="margin-right:20px;font-weight:bold;margin-left:30px;height:40px; width:150px">
                 </div>
                 </span>
        

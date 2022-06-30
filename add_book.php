@@ -46,7 +46,7 @@ if ($conn->query($sql4) === TRUE) {
     
 </head>
 
-<?php include "header.php"?>
+<?php include "admin_header.php"?>
 
   </div>
 </div>

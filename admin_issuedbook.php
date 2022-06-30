@@ -41,7 +41,7 @@ if (isset($_POST["submit"])) {
   <link rel="stylesheet" href="style.css" />
 
 </head>
-<?php include 'header.php';?>
+<?php include 'admin_header.php';?>
 
 
 
